@@ -5,4 +5,10 @@ output:
       in_header: header.tex
 ---
 
-This is a template pdf created in Rmarkdown.
+To add header images to an Rmarkdown, you need a separate latex file, header.tex. The header.tex file for this report is shown below. Note, using engine='bash' in a knitr chunk header allows you to run and see bash commands!
+
+```{r engine='bash', echo=FALSE}
+
+cat header.tex
+
+```
