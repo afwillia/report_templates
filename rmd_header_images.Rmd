@@ -5,7 +5,18 @@ output:
       in_header: header.tex
 ---
 
-To add header images to an Rmarkdown, you need a separate latex file, header.tex. The header.tex file for this report is shown below. Note, using engine='bash' in a knitr chunk header allows you to run and see bash commands!
+To create a pdf with header from Rmarkdown, you need two things, the correct YAML header and a header.tex file.
+
+Your YAML header should contain the follow at minimum:
+
+output:  
+&nbsp;&nbsp;pdf_document:  
+&nbsp;&nbsp;&nbsp;&nbsp;includes:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in_header: header.tex  
+
+Each line is indented by two spaces. Another trick: Since Rmarkdown doesn't support indentation (adding spaces at the beginning of a line doesn't do anything), use '&nbsp' to create spaces.  
+
+The header.tex file identifies, positions, and sizes the images within the header: 
 
 ```{r engine='bash', echo=FALSE}
 
