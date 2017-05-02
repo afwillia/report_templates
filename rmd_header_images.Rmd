@@ -1,0 +1,8 @@
+---
+output: 
+  pdf_document:
+    includes:
+      in_header: header.tex
+---
+
+This is a template pdf created in Rmarkdown.
